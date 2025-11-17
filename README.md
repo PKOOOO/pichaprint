@@ -97,7 +97,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/adrianhajdin/project_threejs_ai.git
+git clone https://github.com/pkoooo/pichaprint.git
 cd project_threejs_ai
 ```
 

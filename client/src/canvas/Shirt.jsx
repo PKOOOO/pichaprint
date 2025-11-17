@@ -34,8 +34,17 @@ const Shirt = () => {
     const targetSize = 1; // world units for the longest side (smaller so STL fits better in view)
     const scale = targetSize / maxSide;
 
-    // center the geometry around the origin
-    geometry.center();
+    // Position the geometry so the base sits at y = 0 and it's centered in X/Z
+    const center = new Vector3();
+    box.getCenter(center);
+
+    const offset = new Vector3(
+      center.x,        // center on X
+      box.min.y,       // move so bottom rests at y = 0 after translation
+      center.z         // center on Z
+    );
+
+    geometry.translate(-offset.x, -offset.y, -offset.z);
 
     return { fittedGeometry: geometry, stlScale: scale };
   }, [rawStlGeometry]);
@@ -60,8 +69,10 @@ const Shirt = () => {
           geometry={fittedGeometry}
           castShadow
           receiveShadow
+          // rotate STL so Z-up models stand upright in our Y-up scene
+          rotation={[-Math.PI / 2, 0, 0]}
           scale={stlScale}
-          position={[0, -0.2, 0]} // slightly lower so it feels grounded and not cropped
+          position={[0, 0, 0]}
         >
           <meshStandardMaterial color={snap.color} metalness={0.2} roughness={0.8} />
         </mesh>
