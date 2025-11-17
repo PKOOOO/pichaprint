@@ -109,6 +109,20 @@ const Customizer = () => {
   }
 
   const readFile = (type) => {
+    if (!file) return;
+
+    const name = file.name.toLowerCase();
+
+    // If the user uploads an STL file, use it as a custom 3D model
+    if (name.endsWith('.stl')) {
+      const objectUrl = URL.createObjectURL(file);
+      state.stlModelUrl = objectUrl;
+      state.useStlModel = true;
+      setActiveEditorTab("");
+      return;
+    }
+
+    // Otherwise treat it as an image decal as before
     reader(file)
       .then((result) => {
         handleDecals(type, result);

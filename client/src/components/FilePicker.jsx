@@ -9,7 +9,8 @@ const FilePicker = ({ file, setFile, readFile }) => {
         <input 
           id="file-upload"
           type="file"
-          accept="image/*"
+          // allow images and 3D model files such as .stl
+          accept="image/*,.stl"
           onChange={(e) => setFile(e.target.files[0])}
         />
         <label htmlFor="file-upload" className="filepicker-label">
