@@ -64,8 +64,8 @@ const BookingCard = () => {
     return (
       <div className="w-full max-w-md">
         <div className="rounded-2xl border border-white/10 bg-white/90 p-8 text-center text-neutral-900 shadow-[0_40px_80px_-60px_rgba(15,23,42,0.8)]">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
-            <CheckCircle className="h-8 w-8 text-emerald-500" />
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
+            <CheckCircle className="h-8 w-8 text-orange-500" />
           </div>
           <h3 className="mt-6 text-2xl font-semibold">Message sent!</h3>
           <p className="mt-2 text-sm text-neutral-600">
@@ -87,7 +87,7 @@ const BookingCard = () => {
   return (
     <div className="w-full max-w-md">
       <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white text-neutral-900 shadow-[0_30px_70px_-45px_rgba(15,23,42,0.45)]">
-        <div className="bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 p-6 text-center text-white">
+        <div className="bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 p-6 text-center text-white">
           <h3 className="text-2xl font-bold">Get in touch</h3>
           <p className="mt-1 text-sm text-white/80">
             Tell us about your toy ideas and we&apos;ll reach out.
@@ -105,7 +105,7 @@ const BookingCard = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full rounded-2xl border border-neutral-200 bg-neutral-50 px-10 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/70"
+                className="w-full rounded-2xl border border-neutral-200 bg-neutral-50 px-10 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-orange-400/70"
               />
             </div>
           </div>
@@ -120,7 +120,7 @@ const BookingCard = () => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Tell us about your uploads and booking date"
-                className="w-full resize-none rounded-2xl border border-neutral-200 bg-neutral-50 px-10 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/70"
+                className="w-full resize-none rounded-2xl border border-neutral-200 bg-neutral-50 px-10 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-orange-400/70"
                 rows={3}
               />
             </div>
@@ -131,7 +131,7 @@ const BookingCard = () => {
               className={
                 status.type === "error"
                   ? "text-xs text-rose-500"
-                  : "text-xs text-emerald-600"
+                  : "text-xs text-orange-600"
               }
             >
               {status.message}

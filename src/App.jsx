@@ -21,7 +21,7 @@ function App() {
             {/* Canvas card */}
             <div className="order-1">
               <div className="relative h-[320px] sm:h-[360px] md:h-[420px] w-full">
-                <div className="absolute inset-0 rounded-[36px] bg-gradient-to-br from-emerald-200/50 via-white/60 to-slate-100 blur-2xl" />
+                <div className="absolute inset-0 rounded-[36px] bg-gradient-to-br from-orange-200/50 via-white/60 to-slate-100 blur-2xl" />
                 <div className="relative h-full overflow-hidden rounded-[32px] border border-white/80 bg-white/70 p-3 shadow-2xl backdrop-blur">
                   <div className="h-full w-full rounded-[28px] border border-white/40 bg-gradient-to-br from-slate-950/90 to-slate-700/80">
                     <Canvas />

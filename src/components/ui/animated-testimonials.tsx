@@ -101,7 +101,7 @@ export const AnimatedTestimonials = ({
               <h3 className="text-2xl font-black text-neutral-900 dark:text-white mb-1 md:mb-2 tracking-tight md:text-4xl">
                 {testimonials[active].name}
               </h3>
-              <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 md:text-base">
+              <p className="text-sm font-semibold text-orange-600 dark:text-orange-400 md:text-base">
                 {testimonials[active].designation}
               </p>
             </div>

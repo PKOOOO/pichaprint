@@ -64,7 +64,7 @@ const FilePicker = ({ file, setFile, readFile, uploadImageTo3d, isUploading, gen
                   value={description}
                   onChange={(e) => setDescription?.(e.target.value)}
                   placeholder="E.g. Smiling robot dog with rocket backpack, low-detail for a 6-year-old."
-                  className="w-full resize-none rounded-lg border border-neutral-200 px-2 py-1 text-xs text-neutral-800 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400"
+                  className="w-full resize-none rounded-lg border border-neutral-200 px-2 py-1 text-xs text-neutral-800 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
                 />
               </label>
             </div>
@@ -88,8 +88,8 @@ const FilePicker = ({ file, setFile, readFile, uploadImageTo3d, isUploading, gen
                 {isUploading
                   ? 'Generating…'
                   : hasGeneratedStl
-                  ? 'Regenerate STL'
-                  : 'Convert'}
+                    ? 'Regenerate STL'
+                    : 'Convert'}
               </HoverBorderGradient>
             </div>
           </div>
